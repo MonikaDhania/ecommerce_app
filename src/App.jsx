@@ -5,7 +5,7 @@ import About from './About';
 import Products from './Products';
 import SingleProduct from './SingleProduct';
 import Services from './Services';
-import Cart from './Cart';
+import Cart from './Cart/Cart';
 import LoginForm from './LoginForm';
 
 const App = () => {

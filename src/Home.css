@@ -1,0 +1,80 @@
+.custom-carousel {
+    width: 800px;  /* Adjust width as needed */
+    height: 500px;  /* Adjust height as needed */
+    background: #000;
+    margin: auto; /* Center the carousel */
+    margin-top: 50px;
+  }
+  
+  .carousel-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .custom-carousel .carousel .control-arrow {
+    background: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+  }
+  
+  .custom-carousel .carousel .control-arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .custom-carousel .carousel .control-next.control-arrow::before,
+  .custom-carousel .carousel .control-prev.control-arrow::before {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    content: '';
+  }
+  
+  .custom-carousel .carousel .control-next.control-arrow::before {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  
+  .custom-carousel .carousel .control-prev.control-arrow::before {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+    
+
+  
+  /* Hide scrollbars but still allow scrolling */
+body, html {
+    overflow: auto; /* Ensure scrolling is still possible */
+  }
+  
+  * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+  
+  *::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+  

@@ -1,19 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from './UserContext';
 
-const LoginForm = ({ onLogin }) => {
+const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const { setUser } = useContext(UserContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    // Add your authentication logic here
     console.log('Email:', email);
     console.log('Password:', password);
-    if (onLogin) {
-      onLogin(); // Ensure this is a function
+    
+    // Example logic for setting the user
+    if (email && password) {
+      setUser(email);
+      navigate('/');
     }
-    navigate('/');
   };
 
   return (
